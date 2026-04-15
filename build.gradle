@@ -27,12 +27,15 @@ loom {
 }
 
 dependencies {
-	    minecraft "com.mojang:minecraft:1.20.1"
-		    mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
-			    modImplementation "net.fabricmc:fabric-loader:0.14.21"
-				    
-						    modImplementation "net.fabricmc.fabric-api:fabric-api:0.83.0+1.20.1"
+		// Minecraft et Fabric Loader
+			minecraft "com.mojang:minecraft:1.20.1"
+				mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+					modImplementation "net.fabricmc:fabric-loader:0.14.21"
+
+						// LE PLUS IMPORTANT : Le Fabric API (celui qui manque dans tes erreurs)
+							modImplementation "net.fabricmc.fabric-api:fabric-api:0.83.0+1.20.1"
 							}
+}
 
 processResources {
 	inputs.property "version", project.version
